@@ -54,10 +54,22 @@
     overflow: hidden;
 }
 
+.card-title {
+    font-size: var(--text-md);
+}
+
 .card-image {
     height: 25vh;
     text-align: center;
     display: block;
+}
+
+.card-image-circle {
+    height: 25vh;
+    width: 25vh;
+    text-align: center;
+    display: block;
+    margin: auto;
 }
 
 .card-image img {
@@ -76,6 +88,13 @@
 .card-menu-title {
     color: var(--primary-color);
     font-size: var(--text-md);
+}
+
+.img-rounded{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--dark-color);
 }
 /* UTILS */
 
@@ -194,7 +213,7 @@ a {
 
 /* Container */
 
-.menu-card-list, .gallery{
+.menu-card-list, .gallery, .review-card-list{
     padding: 8px;
     display: flex;
     justify-content: space-evenly;
