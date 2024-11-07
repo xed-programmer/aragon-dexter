@@ -1,17 +1,100 @@
 :root {
     --primary-color: #FAC132;
+    --dark-color: #212121;
     --text-xl: 2.5rem;
-    --text-lg: 1.5rem;
+    --text-lg: 2rem;
+    --text-md: 1.25rem;
 }
 
-/* para sa mga may same na background color */
-.btn-primary {
+/* UTILS */
+.btn {
+    padding: 10px 20px 10px 20px;
+    color: white;
     background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.p-1 {
+    padding: 0.25rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+.p-5 {
+    padding: 3rem;
+}
+
+
+.card {
+    width: 20vw;
+    box-shadow: 10px 10px 8px rgba(91, 96, 101, 0.4);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 25vw;
+    text-align: center;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.card-menu-title {
+    color: var(--primary-color);
+    font-size: var(--text-md);
+}
+/* UTILS */
+
+/* para sa mga may same na background color */
+.btn.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn.btn-dark, .bg-dark {
+    background-color: var(--dark-color);
 }
 
 /* para naman to sa mga color na same */
 .text-primary {
     color: var(--primary-color);
+}
+
+.text-dark {
+    color: var(--dark-color);
 }
 
 * {
@@ -38,7 +121,8 @@ ul {
     list-style-type: none;
 }
 
-li, a {
+li,
+a {
     text-decoration: none;
 }
 
@@ -54,7 +138,8 @@ li, a {
 }
 
 /* HERO */
-.hero, .about {
+.hero,
+.about {
     height: 90vh;
     width: 100%;
     padding: 10px 40px;
@@ -72,7 +157,8 @@ li, a {
     margin-left: 80px;
 }
 
-.hero-details p, .section-details p {
+.hero-details p,
+.section-details p {
     text-align: justify;
     margin-bottom: 50px;
 }
@@ -81,20 +167,36 @@ li, a {
     height: 70vh;
 }
 
-.hero-image img{
+.hero-image img {
     height: 100%;
 }
+
 /* HERO */
 
 /* Section */
 .section-details {
     margin-left: 50px;
 }
+
 /* section */
 
-/* UTILS */
-.btn {
-    padding: 10px 20px 10px 20px;
-    color: white;
+/* Container */
+.container {
+    margin: 10px;
+    padding: 10px;
+    min-height: 50vh;
 }
-/* UTILS */
+
+.container-title {
+    font-size: var(--text-lg);
+    text-align: center;
+}
+
+/* Container */
+
+.menu-card-list {
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
