@@ -1,10 +1,21 @@
 :root {
     --primary-color: #FAC132;
     --dark-color: #212121;
-    --gold-color:#ffd05b;
+    --gold-color: #ffd05b;
     --text-xl: 2.5rem;
     --text-lg: 2rem;
     --text-md: 1.25rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* UTILS */
@@ -91,14 +102,14 @@
     font-size: var(--text-md);
 }
 
-.img-rounded{
+.img-rounded {
     border-radius: 50%;
     width: 100%;
     height: 100%;
     border: 2px solid var(--dark-color);
 }
 
-.img-thumbnail{
+.img-thumbnail {
     object-fit: cover;
 }
 
@@ -132,13 +143,15 @@
     background-color: var(--primary-color);
 }
 
-.btn.btn-dark, .bg-dark {
+.btn.btn-dark,
+.bg-dark {
     background-color: var(--dark-color);
 }
 
 .bg-gold {
     background-color: var(--gold-color);
 }
+
 /* para naman to sa mga color na same */
 .text-primary {
     color: var(--primary-color);
@@ -152,11 +165,11 @@
     color: var(--dark-color);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Century Gothic', sans-serif;
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
 }
 
 .navbar {
@@ -194,7 +207,8 @@ a {
 
 /* HERO */
 .hero,
-.about, .order {
+.about,
+.order {
     height: 90vh;
     width: 100%;
     padding: 10px 40px;
@@ -245,6 +259,7 @@ a {
     background-image: url('image/bg1.jpg');
     object-fit: cover;
 }
+
 /* section */
 
 /* Container */
@@ -261,7 +276,9 @@ a {
 
 /* Container */
 
-.menu-card-list, .gallery, .review-card-list{
+.menu-card-list,
+.gallery,
+.review-card-list {
     padding: 8px;
     display: flex;
     justify-content: space-evenly;
@@ -293,4 +310,3 @@ button {
 }
 
 /* html tags */
-
