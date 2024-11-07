@@ -46,7 +46,6 @@
     padding: 3rem;
 }
 
-
 .card {
     width: 20vw;
     box-shadow: 10px 10px 8px rgba(91, 96, 101, 0.4);
@@ -56,13 +55,14 @@
 }
 
 .card-image {
-    width: 25vw;
+    height: 25vh;
     text-align: center;
+    display: block;
 }
 
 .card-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
 }
@@ -199,5 +199,9 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    flex-wrap: wrap;
+}
+
+.menu-card-list .card {
+    margin-bottom: 16px;
 }
