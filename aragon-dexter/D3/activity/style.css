@@ -1,6 +1,7 @@
 :root {
     --primary-color: #FAC132;
     --dark-color: #212121;
+    --gold-color:#ffd05b;
     --text-xl: 2.5rem;
     --text-lg: 2rem;
     --text-md: 1.25rem;
@@ -119,6 +120,11 @@
     align-items: center;
 }
 
+.d-flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
 /* UTILS */
 
 /* para sa mga may same na background color */
@@ -130,9 +136,16 @@
     background-color: var(--dark-color);
 }
 
+.bg-gold {
+    background-color: var(--gold-color);
+}
 /* para naman to sa mga color na same */
 .text-primary {
     color: var(--primary-color);
+}
+
+.text-gold {
+    color: var(--gold-color);
 }
 
 .text-dark {
@@ -268,7 +281,8 @@ a {
 
 footer {
     background-color: rgb(163, 163, 163);
-    height: 50vh;
+    height: 40vh;
+    padding-top: 2.5rem;
 }
 
 /* html tags */
