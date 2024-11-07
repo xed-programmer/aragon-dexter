@@ -266,11 +266,17 @@ a {
     box-shadow: 8px 8px 10px rgba(91, 96, 101, 0.4);
 }
 
+footer {
+    background-color: rgb(163, 163, 163);
+    height: 50vh;
+}
+
 /* html tags */
 
 button {
     border: none;
     cursor: pointer;
 }
+
 /* html tags */
 
