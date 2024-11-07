@@ -54,7 +54,7 @@ li, a {
 }
 
 /* HERO */
-.hero {
+.hero, .about {
     height: 90vh;
     width: 100%;
     padding: 10px 40px;
@@ -72,7 +72,7 @@ li, a {
     margin-left: 80px;
 }
 
-.hero-details p {
+.hero-details p, .section-details p {
     text-align: justify;
     margin-bottom: 50px;
 }
@@ -85,6 +85,12 @@ li, a {
     height: 100%;
 }
 /* HERO */
+
+/* Section */
+.section-details {
+    margin-left: 50px;
+}
+/* section */
 
 /* UTILS */
 .btn {
