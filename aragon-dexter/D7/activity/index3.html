@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+</head>
+<body>
+    <div class="container p-4">
+        <div class="row mb-4">
+            <h1>Shopping Cart</h1>
+            <h3>Your Cart</h3>
+            <ul class="list-group" id="cart-list"></ul>
+    
+            <p class="fw-bold">Total: <span id="total-amount">0.00</span></p>
+            <button class="btn btn-secondary">Checkout</button>
+        </div>
+
+        <div class="row">
+            <h3>Products</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="d-flex" data-prod-name="Product 1">
+                        <p>Product 1</p>                
+                        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>

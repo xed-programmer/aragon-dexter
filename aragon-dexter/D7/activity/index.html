@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+</head>
+<body>
+    <div class="container p-4">
+        <h1 class="text-center">Loan Calculator</h1>
+        <form id="loan-form">
+            <div>
+                <label for="amount" class="form-label">Loan Amount:</label>
+                <input type="number" class="form-control" name="amount" id="amount">
+            </div>
+            <div>
+                <label for="amount" class="form-label">Interest Rate (%):</label>
+                <input type="number" class="form-control" name="rate" id="rate">
+            </div>
+            <div>
+                <label for="amount" class="form-label">Loan Term (Years):</label>
+                <input type="number" class="form-control" name="term" id="term">
+            </div>
+            <input type="submit" class="btn btn-primary my-2" value="Calculate">
+            <h3 id="monthly-pay-display"></h3>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
