@@ -13,16 +13,31 @@
             <h3>Your Cart</h3>
             <ul class="list-group" id="cart-list"></ul>
     
-            <p class="fw-bold">Total: <span id="total-amount">0.00</span></p>
-            <button class="btn btn-secondary">Checkout</button>
+            <p class="fw-bold">Total: ₱<span id="total-amount">0.00</span></p>
+            <div class="row col-lg-2 col-md-2 col-sm-10">
+                <button class="btn btn-secondary">Checkout</button>
+
+            </div>
         </div>
 
         <div class="row">
             <h3>Products</h3>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <div class="d-flex" data-prod-name="Product 1">
+                    <div class="d-flex" data-prod-name="Product 1" data-prod-price="10"> 
                         <p>Product 1</p>                
+                        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex" data-prod-name="Product 2" data-prod-price="15"> 
+                        <p>Product 2</p>                
+                        <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex" data-prod-name="Product 3" data-prod-price="20"> 
+                        <p>Product 3</p>                
                         <button class="btn btn-primary btn-add-to-cart">Add to Cart</button>
                     </div>
                 </li>
