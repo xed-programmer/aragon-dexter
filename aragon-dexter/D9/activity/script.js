@@ -7,7 +7,7 @@ const fetchProducts = async () => {
         }
 
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         
         let html = '';
         data.forEach(product => {
@@ -39,7 +39,7 @@ const fetchProducts = async () => {
         productContainer.innerHTML = html;
     }catch (err){
         console.error('An error occured:',err);
-        
+        productContainer.textContent = 'Failed to fetch data.'
     }
 };
 
