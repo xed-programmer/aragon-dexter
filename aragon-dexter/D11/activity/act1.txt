@@ -1,0 +1,112 @@
+// Step 1: Create a new MongoDB Atlas cluster and connect to it using MongoDB Compass .
+
+// Step 2: In MongoDB Compass, create a new database called "Bookstore" and a collection called "Books".
+
+// Step 3: Perform the following CRUD operations using MongoDB Compass:
+
+// a) Create Operation:
+// Insert at least three book documents with different fields such as title, author, genre, and publication year.
+    db.Books.insertMany([
+        {
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "genre": "Fiction",
+            "publication_year": 1960
+        },
+        {
+            "title": "1984",
+            "author": "George Orwell",
+            "genre": "Dystopian",
+            "publication_year": 1949
+        },
+        {
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "genre": "Classic",
+            "publication_year": 1925
+        },
+        {
+            "title": "Becoming",
+            "author": "Michelle Obama",
+            "genre": "Memoir",
+            "publication_year": 2018
+        },
+        {
+            "title": "The Hobbit",
+            "author": "J.R.R. Tolkien",
+            "genre": "Fantasy",
+            "publication_year": 1937
+        },
+        {
+            "title": "Sapiens: A Brief History of Humankind",
+            "author": "Yuval Noah Harari",
+            "genre": "Non-Fiction",
+            "publication_year": 2011
+        },
+        {
+            "title": "Pride and Prejudice",
+            "author": "Jane Austen",
+            "genre": "Romance",
+            "publication_year": 1813
+        },
+        {
+            "title": "The Catcher in the Rye",
+            "author": "J.D. Salinger",
+            "genre": "Fiction",
+            "publication_year": 1951
+        },
+        {
+            "title": "The Alchemist",
+            "author": "Paulo Coelho",
+            "genre": "Adventure",
+            "publication_year": 1988
+        },
+        {
+            "title": "Dune",
+            "author": "Frank Herbert",
+            "genre": "Science Fiction",
+            "publication_year": 1965
+        }
+    ]);
+// b) Read Operation:
+// Retrieve all the book documents in the "Books" collection.
+    db.Books.find();
+// Retrieve a specific book document based on its title or author.
+    db.Books.find({
+    $or: [
+    {title: 'Dune'},
+    {author: 'Paulo Coelho'}
+    ]
+    })
+// c) Update Operation:
+// Update the genre of a book document.
+    db.Books.updateOne(
+    {
+        title: 'Dune'
+    },
+    {
+        $set: {
+            genre: 'Fantasy'
+        }
+    }
+    )
+// Update the publication year of a book document.
+    db.Books.updateOne(
+    {
+        title: 'The Alchemist'
+    },
+    {
+        $set: {
+            publication_year: 2024
+        }
+    }
+    )
+// d) Delete Operation:
+// Delete a book document based on its title or author.
+    db.Books.deleteOne({
+        genre: 'Adventure'
+    })
+// Step 4: After each operation, verify the changes by re-reading the data from the "Books" collection.
+
+// Note: Remember to clean up the cluster and delete the "Bookstore" database if no longer needed.
+
