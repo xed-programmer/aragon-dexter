@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "673ec9042047a2fc5fbc9d38"
+  },
+  "name": "Alice Johnson",
+  "email": "alice.j@example.com",
+  "enrolledCourses": []
+},
+{
+  "_id": {
+    "$oid": "673ec9042047a2fc5fbc9d39"
+  },
+  "name": "Bob Brown",
+  "email": "bob.b@example.com",
+  "enrolledCourses": []
+},
+{
+  "_id": {
+    "$oid": "673ec9042047a2fc5fbc9d3a"
+  },
+  "name": "Charlie White",
+  "email": "charlie.w@example.com",
+  "enrolledCourses": []
+}]
