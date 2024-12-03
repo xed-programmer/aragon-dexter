@@ -1,0 +1,28 @@
+npm install -D tailwindcss postcss autoprefixer
+Alan Beraquit
+7:18 PM
+npx tailwindcss init
+Alan Beraquit
+7:20 PM
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+Alan Beraquit
+7:21 PM
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+npm install daisyui
