@@ -1,6 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import axiosService from '../../services/seminarReservationService';
 
 const Seminar = () => {
+    const [seminars, setSeminars] = useState([]);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        const fetchSeminars = async () => {
+            try {
+                const response = await axiosService.get('/api/seminars');
+                setSeminars(response.message);
+            } catch (err) {
+                setError('Access denied');
+            }
+        };
+
+        fetchSeminars();
+    }, []);
+    console.log(seminars);
+    
   return (
     <>
     <div className="overflow-x-auto p-4 m-4">
@@ -9,33 +27,22 @@ const Seminar = () => {
             <thead>
             <tr>
                 <th></th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Favorite Color</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
             </tr>
             </thead>
             <tbody>
-            {/* row 1 */}
-            <tr>
-                <th>1</th>
-                <td>Cy Ganderton</td>
-                <td>Quality Control Specialist</td>
-                <td>Blue</td>
-            </tr>
-            {/* row 2 */}
-            <tr>
-                <th>2</th>
-                <td>Hart Hagerty</td>
-                <td>Desktop Support Technician</td>
-                <td>Purple</td>
-            </tr>
-            {/* row 3 */}
-            <tr>
-                <th>3</th>
-                <td>Brice Swyre</td>
-                <td>Tax Accountant</td>
-                <td>Red</td>
-            </tr>
+            {seminars && seminars.map((s,i) => {
+                return `
+                <tr>
+                    <th>${i+1}</th>
+                    <td>${s.title}</td>
+                    <td>${s.description}</td>
+                    <td>${s.date}</td>
+                </tr>
+                `
+            })}            
             </tbody>
         </table>
     </div>

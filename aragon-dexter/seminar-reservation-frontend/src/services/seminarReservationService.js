@@ -1,8 +1,7 @@
 import axios from 'axios';
-
 // Create an Axios instance
 const axiosInstance = axios.create({
-    baseURL: process.env.API_ENDPOINT, // Base API URL from .env
+    baseURL: import.meta.env.VITE_API_ENDPOINT, // Base API URL from .env
     timeout: 10000, // Set a timeout for requests
 });
 
